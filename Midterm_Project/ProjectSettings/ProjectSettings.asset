@@ -590,9 +590,9 @@ PlayerSettings:
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: be330bfe-29e4-4af5-9042-859bbab1d2e8
-  projectName: Midterm_Project (1)
-  organizationId: joelrod199627
+  cloudProjectId: 
+  projectName: 
+  organizationId: 
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
