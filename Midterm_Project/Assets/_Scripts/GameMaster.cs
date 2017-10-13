@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GameMaster : MonoBehaviour {
 
-	private PlayerController player;
+	private PenguinController player;
 
 	public int points;
 

@@ -12,12 +12,12 @@ public class HealthSystem : MonoBehaviour {
 
 	public Image heartsUI;
 
-	private PlayerController player;
+	private PenguinController player;
 
 	// Use this for initialization
 	void Start () {
 		
-		player = GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerController> ();
+		player = GameObject.FindGameObjectWithTag ("Player").GetComponent<PenguinController> ();
 	}
 	
 	// Update is called once per frame

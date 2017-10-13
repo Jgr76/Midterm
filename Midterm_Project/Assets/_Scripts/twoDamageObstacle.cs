@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class twoDamageObstacle : MonoBehaviour {
 
-	private PlayerController player;
+	private PenguinController player;
 
 	// Use this for initialization
 	void Start () {
-		player = GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerController> ();
+		player = GameObject.FindGameObjectWithTag ("Player").GetComponent<PenguinController> ();
 	}
 
 	void OnTriggerEnter2D (Collider2D other){

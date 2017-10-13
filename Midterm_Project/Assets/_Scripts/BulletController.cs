@@ -8,7 +8,7 @@ public class BulletController : MonoBehaviour {
 	public float speed;
 	public GameObject bullet;
 
-	private PlayerController player;
+	private PenguinController player;
 
 
 	AudioSource audio;
@@ -19,7 +19,7 @@ public class BulletController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		player = GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerController> ();
+		player = GameObject.FindGameObjectWithTag ("Player").GetComponent<PenguinController> ();
 		audio = GetComponent<AudioSource> ();
 
 	}

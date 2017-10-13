@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(AudioSource))]
 
-public class PlayerController : MonoBehaviour {
+public class PenguinController : MonoBehaviour {
 
 	public float speed;
 	public float maxSpeed;
@@ -116,7 +116,7 @@ public class PlayerController : MonoBehaviour {
 		}
 
 
-		if (col.CompareTag ("Coin")) {
+		if (col.CompareTag ("Fish")) {
 
 			Destroy(col.gameObject);
 			gm.points += 1;
@@ -178,7 +178,7 @@ public class PlayerController : MonoBehaviour {
 	void Death () {
 		deathCheck = true;
 		Debug.Log ("Player is Dead");
-		SceneManager.LoadScene ("Rodrigues_Week_1_Prototype");
+		SceneManager.LoadScene ("Level1");
 	}
 	IEnumerator DelayedRestart() {
 		yield return new WaitForSeconds (1);

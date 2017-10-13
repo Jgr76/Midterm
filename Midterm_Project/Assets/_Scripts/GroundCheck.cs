@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class GroundCheck : MonoBehaviour {
 
-	private PlayerController player;
+	private PenguinController player;
 
 	// Use this for initialization
 	void Start () {
 
-		player = gameObject.GetComponentInParent<PlayerController> ();
+		player = gameObject.GetComponentInParent<PenguinController> ();
 
 	}
 
