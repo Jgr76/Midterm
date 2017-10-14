@@ -30,7 +30,8 @@ public class PenguinController : MonoBehaviour {
 	private GameMaster gm;
 
 	public int curHealth;
-	public int maxHealth = 3;
+	public int maxHealth = 16;
+	public int decHealth = 1;
 	public bool deathCheck;
 	public bool hurt;
 
@@ -126,7 +127,12 @@ public class PenguinController : MonoBehaviour {
 			Debug.Log ("SCENE CHANGED");
 
 		}
-
+		if (col.CompareTag("Fish")) {
+			curHealth += 1;
+		} else {
+			curHealth -= decHealth * Time.deltaTime;
+			Debug.Log (curHealth);
+		}
 
 	}
 
