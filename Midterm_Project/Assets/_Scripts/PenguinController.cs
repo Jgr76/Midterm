@@ -12,7 +12,7 @@ public class PenguinController : MonoBehaviour {
 
 	public float speed;
 	public float maxSpeed;
-	public float jumpForce = 150f;
+	public float jumpForce = 300f;
 
 	public bool isGrounded;
 
