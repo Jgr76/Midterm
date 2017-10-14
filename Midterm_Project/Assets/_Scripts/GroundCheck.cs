@@ -18,12 +18,12 @@ public class GroundCheck : MonoBehaviour {
 		player.isGrounded = true;
 	}
 
-	void OnTriggerStay2d ( Collider2D col)
+	void OnTriggerStay2D ( Collider2D col)
 	{
 		player.isGrounded = true;
 	}
 
-	void OnTriggerExit2d ( Collider2D col)
+	void OnTriggerExit2D ( Collider2D col)
 	{
 		player.isGrounded = false;
 	}

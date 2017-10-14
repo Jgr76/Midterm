@@ -19,7 +19,7 @@ public class GameMaster : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		pointsText.text = ("Points: " + points); 
+		pointsText.text = ("Fish: " + points); 
 		
 	}
 }

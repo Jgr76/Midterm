@@ -34,8 +34,7 @@ public class PenguinController : MonoBehaviour {
 	public bool deathCheck;
 	public bool hurt;
 
-	public Transform bulletPoint;
-	public GameObject bullet;
+
 
 	void Start () {
 
@@ -45,8 +44,6 @@ public class PenguinController : MonoBehaviour {
 		audio = GetComponent<AudioSource> (); // get access to Audio component
 
 		gm = GameObject.FindGameObjectWithTag ("Game Master").GetComponent<GameMaster> (); // get access to Game Master script
-
-
 	}
 
 	     
@@ -101,10 +98,7 @@ public class PenguinController : MonoBehaviour {
 		if (curHealth <= 0){
 			StartCoroutine ("DelayedRestart");
 		}
-
-		if (Input.GetKeyDown (KeyCode.Z)) {
-			Instantiate (bullet, bulletPoint.position, bulletPoint.rotation);
-		}
+			
 	}
 
 	void OnTriggerEnter2D(Collider2D col) {
@@ -122,19 +116,7 @@ public class PenguinController : MonoBehaviour {
 			gm.points += 1;
 			audio.PlayOneShot (coinCollect, 1.0f);
 
-
 		}
-
-		if (col.CompareTag ("Gem")) {
-
-			Destroy(col.gameObject);
-			gm.points += 5;
-			audio.PlayOneShot (coinCollect, 1.0f);
-
-
-		}
-
-
 
 
 		if (col.CompareTag ("Level 2 Trigger")) {
