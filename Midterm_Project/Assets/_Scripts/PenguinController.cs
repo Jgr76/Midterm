@@ -35,6 +35,7 @@ public class PenguinController : MonoBehaviour {
 	public bool deathCheck;
 	public bool hurt;
 
+	public GameObject gameOverScreen;
 
 
 	void Start () {
@@ -45,6 +46,8 @@ public class PenguinController : MonoBehaviour {
 		audio = GetComponent<AudioSource> (); // get access to Audio component
 
 		gm = GameObject.FindGameObjectWithTag ("Game Master").GetComponent<GameMaster> (); // get access to Game Master script
+
+		gameOverScreen.SetActive(false);
 	}
 
 	     
@@ -99,6 +102,17 @@ public class PenguinController : MonoBehaviour {
 		if (curHealth <= 0){
 			StartCoroutine ("DelayedRestart");
 		}
+		if (Input.GetKeyDown (KeyCode.R)) {
+
+			SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
+		}
+
+		if(!deathCheck){
+
+			Time.timeScale = 1;
+
+		}
+
 			
 	}
 
@@ -171,8 +185,14 @@ public class PenguinController : MonoBehaviour {
 	}
 	void Death () {
 		deathCheck = true;
-		Debug.Log ("Player is Dead");
-		SceneManager.LoadScene ("Level1");
+		gameOverScreen.SetActive (true);
+		if (deathCheck) {
+
+			Debug.Log ("Player is Dead");
+
+			Time.timeScale = 0;
+		
+	}
 	}
 	IEnumerator DelayedRestart() {
 		yield return new WaitForSeconds (1);
