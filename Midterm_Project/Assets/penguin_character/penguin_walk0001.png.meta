@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 01fc2947d32f02543a94305bc72e4b0a
-timeCreated: 1507779821
+timeCreated: 1508011543
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
@@ -56,7 +56,15 @@ TextureImporter:
   textureFormatSet: 0
   platformSettings:
   - buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 128
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 128
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -66,8 +74,34 @@ TextureImporter:
   spriteSheet:
     serializedVersion: 2
     sprites: []
-    outline: []
-    physicsShape: []
+    outline:
+    - - {x: -58.385963, y: 288}
+      - {x: -152.70175, y: 256.5}
+      - {x: -224.5614, y: 27}
+      - {x: -224.5614, y: -243}
+      - {x: -152.70175, y: -283.5}
+      - {x: 170.66667, y: -283.5}
+      - {x: 170.66667, y: 288}
+    physicsShape:
+    - - {x: 134.73685, y: 139.5}
+      - {x: 125.75439, y: 252}
+      - {x: 62.877193, y: 283.5}
+      - {x: -44.91228, y: 283.5}
+      - {x: -89.82456, y: 261}
+      - {x: -130.24562, y: 198}
+      - {x: -130.24562, y: 67.5}
+      - {x: -184.14035, y: -13.5}
+      - {x: -188.63158, y: -135}
+      - {x: -215.57895, y: -153}
+      - {x: -215.57895, y: -202.5}
+      - {x: -188.63158, y: -238.5}
+      - {x: -139.22807, y: -261}
+      - {x: -35.929825, y: -265.5}
+      - {x: 0, y: -279}
+      - {x: 143.7193, y: -279}
+      - {x: 166.17545, y: -202.5}
+      - {x: 166.17545, y: -31.5}
+      - {x: 161.6842, y: 9}
   spritePackingTag: 
   userData: 
   assetBundleName: 
