@@ -29,9 +29,9 @@ public class PenguinController : MonoBehaviour {
 
 	private GameMaster gm;
 
-	public int curHealth;
+	public float curHealth;
 	public int maxHealth = 16;
-	public int decHealth = 1;
+	public float decHealth = 1;
 	public bool deathCheck;
 	public bool hurt;
 
@@ -127,11 +127,17 @@ public class PenguinController : MonoBehaviour {
 			Debug.Log ("SCENE CHANGED");
 
 		}
-		if (col.CompareTag("Fish")) {
+		if (col.CompareTag ("Level 3 Trigger")) {
+
+			SceneManager.LoadScene ("Level 3");
+
+			Debug.Log ("SCENE CHANGED");
+
+		}
+		if (col.CompareTag ("Fish")) {
 			curHealth += 1;
 		} else {
-			curHealth -= decHealth * Time.deltaTime;
-			Debug.Log (curHealth);
+			StartCoroutine ("HealthDeplete");
 		}
 
 	}
@@ -176,5 +182,10 @@ public class PenguinController : MonoBehaviour {
 	public void Damage(int dmg) {
 		audio.PlayOneShot (damageSfx, 1.0f);
 		curHealth -= dmg;
+	}
+
+	IEnumerator HealthDeplete (){
+		curHealth -= decHealth;
+		yield return new WaitForSeconds (1);
 	}
 }

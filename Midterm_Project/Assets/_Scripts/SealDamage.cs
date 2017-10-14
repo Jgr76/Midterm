@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Obstacles : MonoBehaviour {
+public class SealDamage: MonoBehaviour {
 
 	private PenguinController player;
 
@@ -14,15 +14,15 @@ public class Obstacles : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D other){
 
 		if (other.gameObject.tag == "Player") {
-		
+
 			player.hurt = true;
-			player.Damage (1);
+			player.Damage (2);
 
 		} else {
 			player.hurt = false;
 		}
 	}
-	
+
 	// Update is called once per frame
 	void OnTriggerExit2d (Collider2D other){
 		if (other.gameObject.tag == "Player") {

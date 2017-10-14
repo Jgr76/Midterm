@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class twoDamageObstacle : MonoBehaviour {
+public class PolarBearDamage: MonoBehaviour {
 
 	private PenguinController player;
 
@@ -16,7 +16,7 @@ public class twoDamageObstacle : MonoBehaviour {
 		if (other.gameObject.tag == "Player") {
 
 			player.hurt = true;
-			player.Damage (2);
+			player.Damage (4);
 
 		} else {
 			player.hurt = false;

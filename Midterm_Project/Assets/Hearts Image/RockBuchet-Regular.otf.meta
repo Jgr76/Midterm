@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 1aeb360e45e1adf479ee1f6ee09796f4
+timeCreated: 1508005544
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: RockBuchet
+  fontNames:
+  - RockBuchet
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
